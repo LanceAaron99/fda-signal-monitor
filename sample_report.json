@@ -1,0 +1,136 @@
+{
+  "safetyreportversion": "1",
+  "safetyreportid": "24795581",
+  "primarysourcecountry": "US",
+  "occurcountry": "US",
+  "transmissiondateformat": "102",
+  "transmissiondate": "20250409",
+  "reporttype": "1",
+  "serious": "1",
+  "seriousnessdeath": "2",
+  "seriousnesslifethreatening": "2",
+  "seriousnesshospitalization": "2",
+  "seriousnessdisabling": "2",
+  "seriousnesscongenitalanomali": "2",
+  "seriousnessother": "1",
+  "receivedateformat": "102",
+  "receivedate": "20250101",
+  "receiptdateformat": "102",
+  "receiptdate": "20250101",
+  "fulfillexpeditecriteria": "1",
+  "companynumb": "US-UCBSA-2024068227",
+  "primarysource": {
+    "reportercountry": "US",
+    "qualification": "3"
+  },
+  "sender": {
+    "sendertype": "6",
+    "senderorganization": "UCB"
+  },
+  "receiver": {
+    "receivertype": "6",
+    "receiverorganization": "FDA"
+  },
+  "patient": {
+    "patientonsetage": "36",
+    "patientonsetageunit": "801",
+    "patientsex": "2",
+    "reaction": [
+      {
+        "reactionmeddraversionpt": "27.1",
+        "reactionmeddrapt": "Psoriatic arthropathy",
+        "reactionoutcome": "6"
+      }
+    ],
+    "drug": [
+      {
+        "drugcharacterization": "1",
+        "medicinalproduct": "CIMZIA",
+        "drugauthorizationnumb": "125160",
+        "drugstructuredosagenumb": "400",
+        "drugstructuredosageunit": "003",
+        "drugseparatedosagenumb": "1",
+        "drugintervaldosageunitnumb": "4",
+        "drugintervaldosagedefinition": "803",
+        "drugdosagetext": "400 MILLIGRAM, EV 4 WEEKS",
+        "drugdosageform": "Solution for injection in pre-filled syringe",
+        "drugadministrationroute": "058",
+        "drugindication": "Psoriatic arthropathy",
+        "drugstartdateformat": "610",
+        "drugstartdate": "202203",
+        "actiondrug": "4",
+        "activesubstance": {
+          "activesubstancename": "CERTOLIZUMAB PEGOL"
+        },
+        "openfda": {
+          "application_number": [
+            "BLA125160"
+          ],
+          "brand_name": [
+            "CIMZIA"
+          ],
+          "generic_name": [
+            "CERTOLIZUMAB PEGOL"
+          ],
+          "manufacturer_name": [
+            "UCB, Inc."
+          ],
+          "product_ndc": [
+            "50474-700",
+            "50474-710",
+            "50474-750"
+          ],
+          "product_type": [
+            "HUMAN PRESCRIPTION DRUG"
+          ],
+          "rxcui": [
+            "795081",
+            "795085",
+            "849597",
+            "849599",
+            "2724369",
+            "2724370",
+            "2724371",
+            "2724372"
+          ],
+          "spl_id": [
+            "4b984e6f-72ac-4fdc-e063-6394a90af105"
+          ],
+          "spl_set_id": [
+            "b4c2c9dc-a0bb-4d64-a667-a67ebe88392d"
+          ],
+          "package_ndc": [
+            "50474-700-62",
+            "50474-700-61",
+            "50474-710-79",
+            "50474-710-80",
+            "50474-710-81",
+            "50474-750-10"
+          ],
+          "nui": [
+            "N0000175610",
+            "N0000175451"
+          ],
+          "pharm_class_epc": [
+            "Tumor Necrosis Factor Blocker [EPC]"
+          ],
+          "pharm_class_moa": [
+            "Tumor Necrosis Factor Receptor Blocking Activity [MoA]"
+          ],
+          "unii": [
+            "UMD07X179E"
+          ],
+          "route": [
+            "SUBCUTANEOUS"
+          ],
+          "substance_name": [
+            "CERTOLIZUMAB PEGOL"
+          ]
+        }
+      }
+    ],
+    "summary": {
+      "narrativeincludeclinical": "CASE EVENT DATE: 20241101"
+    }
+  }
+}
