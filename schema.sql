@@ -42,3 +42,5 @@ CREATE TABLE IF NOT EXISTS etl_runs (
 CREATE INDEX IF NOT EXISTS idx_reports_date    ON reports(receive_date);
 CREATE INDEX IF NOT EXISTS idx_drugs_generic   ON report_drugs(generic_name);
 CREATE INDEX IF NOT EXISTS idx_reactions_term  ON report_reactions(reaction);
+CREATE INDEX IF NOT EXISTS idx_drugs_report     ON report_drugs(safetyreportid);
+CREATE INDEX IF NOT EXISTS idx_reactions_report ON report_reactions(safetyreportid);

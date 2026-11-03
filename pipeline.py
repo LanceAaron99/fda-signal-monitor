@@ -10,7 +10,8 @@ logging.basicConfig(
     handlers=[logging.FileHandler("pipeline.log", encoding="utf-8"), logging.StreamHandler()])
 log = logging.getLogger("pipeline")
 
-DEFAULT_START = date(2025, 1, 1)
+DEFAULT_START = date(2026, 1, 1)
+RETENTION_MONTHS = 9
 
 def last_loaded_date(conn):
     with conn.cursor() as cur:
@@ -34,6 +35,15 @@ def db_size(conn):
         cur.execute("SELECT pg_size_pretty(pg_database_size(current_database()))")
         return cur.fetchone()[0]
 
+def apply_retention(conn):
+    """Delete reports older than 9 months before the newest date."""
+    with conn, conn.cursor() as cur:
+        cur.execute("""DELETE FROM reports
+                       WHERE receive_date < (SELECT MAX(receive_date) FROM reports)
+                                            - %s * INTERVAL '1 month'""",
+                    (RETENTION_MONTHS,))
+        log.info(f"Retention: removed {cur.rowcount} old reports")
+
 def run(conn, d_from, d_to):
     run_id = start_run(conn, d_from, d_to)
     log.info(f"Run {run_id}: loading {d_from} to {d_to}")
@@ -48,6 +58,7 @@ def run(conn, d_from, d_to):
             else:
                 log.info(f"{day}: no data")
             day += timedelta(days=1)
+        apply_retention(conn)
         finish_run(conn, run_id, total, "success")
         log.info(f"Run {run_id} done ✅ {total} reports loaded | DB size: {db_size(conn)}")
     except Exception as e:
