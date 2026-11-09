@@ -2,3 +2,4 @@ venv/
 .env
 pipeline.log
 __pycache__/
+drug_indications.csv
